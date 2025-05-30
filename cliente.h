@@ -6,6 +6,7 @@
 typedef struct cliente {
     char nome[200];
     char email[200];
+    int id;
 } Cliente;
 
 extern Cliente clientesStruct[QTD_CLIENTES];
@@ -16,9 +17,20 @@ void listarClientes();
 void menuEditarCliente();
 void mostraOpcoesClientes();
 void buscarClienteMenu();
-void encontraIndexDeCliente(int*, int*, char[]);
-void menuClienteSelecionado(char[], int, int);
-void excluirCliente(char[], int);
-void alterarCliente(char[], int);
+int encontraIndexDeCliente(int id);
+void menuClienteSelecionado(int id, int index);
+void excluirCliente(int id, int index);
+void alterarCliente(int id, int index);
 
 #endif
+
+
+
+
+
+
+
+
+
+
+
