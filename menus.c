@@ -11,6 +11,7 @@ void mostraOpcoes() {
         "3 - listar clientes\n"
         "4 - editar cliente\n"
         "5 - editar produto\n"
+        "6 - listar produtos\n"
     );
 }
 
@@ -31,3 +32,15 @@ void mostraOpcoesClienteSelecionado() {
         "2 - alterar nome\n"
     );
 }
+
+
+
+
+
+
+
+
+
+
+
+
