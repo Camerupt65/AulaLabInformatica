@@ -5,6 +5,9 @@
 #include "produto.h"
 
 
+
+
+
 void menu();
 
 int main() {
@@ -25,8 +28,18 @@ void menu() {
             case 3: listarClientes(); break;
             case 4: menuEditarCliente(); break;
             case 5: editarProdutos(); break;
+            case 6: listarProdutos(); break;
             case 0: printf("Encerrando...\n"); break;
             default: printf("Opcao invalida.\n");
         }
     } while (opcao != 0);
 }
+
+
+
+
+
+
+
+
+
