@@ -8,7 +8,7 @@ int qtdClientesCadastrados = 0;
 int ultimoIdCliente = 0;
 
 
-// 1
+// 1 insercao
 void cadastrarCliente() {
     if (qtdClientesCadastrados >= QTD_CLIENTES) {
         printf("Limite de clientes atingido.\n");
@@ -23,19 +23,24 @@ void cadastrarCliente() {
     qtdClientesCadastrados++;
 }
 
-// 3
+
+
+// 2 listagem
 void listarClientes() {
     if (qtdClientesCadastrados == 0) {
         printf("Nenhum cliente cadastrado.\n");
         return;
     }
+    printf("\n--------------------------");
     for (int i = 0; i < qtdClientesCadastrados; i++) {
-        printf("id: %d | nome: %s\n", clientesStruct[i].id, clientesStruct[i].nome);
+        printf("\nid: %d | nome: %s", clientesStruct[i].id, clientesStruct[i].nome);
     }
+    printf("\n--------------------------\n");
 }
 
 
-// 4
+
+// 3 menu de edicao
 void menuEditarCliente() {
     int opcao;
     do {
@@ -50,8 +55,7 @@ void menuEditarCliente() {
     } while (opcao != 0);
 }
 
-
-// 4.1
+// 3.1 busca
 void buscarClienteMenu() {
     int id, index;
 
@@ -75,6 +79,7 @@ int encontraIndexDeCliente(int id) {
     return -1;
 }
 
+// 3.1 menu de edicao 2
 void menuClienteSelecionado(int id, int index) {
     int opcao;
     mostraOpcoesClienteSelecionado();
@@ -89,7 +94,7 @@ void menuClienteSelecionado(int id, int index) {
     }
 }
 
-// 4.1.1
+// 3.1.1 exclusao
 void excluirCliente(int id, int index) {
     for (int j = index; j < qtdClientesCadastrados - 1; j++) {
         clientesStruct[j] = clientesStruct[j + 1];
@@ -98,8 +103,7 @@ void excluirCliente(int id, int index) {
     printf("Cliente com ID %d excluído com sucesso.\n", id);
 }
 
-
-// 4.1.2
+// 3.1.2 alteracao
 void alterarCliente(int id, int index) {
     char novoNome[200];
     printf("Digite o novo nome: ");
