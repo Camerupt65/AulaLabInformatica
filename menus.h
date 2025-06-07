@@ -4,6 +4,8 @@
 void mostraOpcoes();
 void mostraOpcoesClientes();
 void mostraOpcoesClienteSelecionado();
+void mostraOpcoesProdutos();
+void mostraOpcoesProdutoSelecionado();
 
 #endif
 
