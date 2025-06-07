@@ -15,7 +15,18 @@ extern int qtdProdutosCadastrados;
 
 void insereProduto();
 void listarProdutos();
-void editarProdutos();
+void menuEditarProduto();
+void buscarProdutoMenu();
+int encontraIndexDeProduto(int id);
+void menuProdutoSelecionado(int id, int index);
+void excluirProduto(int id, int index);
+void alterarProduto(int id, int index);
+
+
+
+
+
+
 
 #endif
 
