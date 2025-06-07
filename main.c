@@ -3,19 +3,20 @@
 #include "menus.h"
 #include "cliente.h"
 #include "produto.h"
-
-
+#include "venda.h"
 
 
 
 void menu();
 
 int main() {
+    atribuicaoDeNumZeroAVarNumDeProComp();
     menu();
 
     return 0;
 }
 
+// switch menu principal
 void menu() {
     int opcao;
     do {
@@ -24,11 +25,12 @@ void menu() {
         
         switch(opcao) {
             case 1: cadastrarCliente(); break;
-            case 2: insereProduto(); break;
-            case 3: listarClientes(); break;
-            case 4: menuEditarCliente(); break;
-            case 5: editarProdutos(); break;
-            case 6: listarProdutos(); break;
+            case 2: listarClientes(); break;
+            case 3: menuEditarCliente(); break;
+            case 4: insereProduto(); break;
+            case 5: listarProdutos(); break;
+            case 6: menuEditarProduto(); break;
+            case 7: gerarVendaNova(); break;
             case 0: printf("Encerrando...\n"); break;
             default: printf("Opcao invalida.\n");
         }
