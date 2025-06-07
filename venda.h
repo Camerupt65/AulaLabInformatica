@@ -12,8 +12,15 @@ typedef struct venda {
     int idCliente;
     ProdutoVenda produtos[10];
     float valorTotal;
+    int numDeProdutosDiferentesComprados;
 } Venda;
 
-void gerarVenda();
+
+extern Venda venda[QTD_VENDAS];
+
+void atribuicaoDeNumZeroAVarNumDeProComp();
+void gerarVendaNova();
+void solicitaClienteComprador();
+void solicitaProdutoComprado();
 
 #endif
